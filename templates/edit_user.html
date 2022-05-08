@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="row">
+    <div class="col-8 mx-auto">
+        <h2>Edit Student</h2>
+        <hr>
+        <form action="{{url_for('edit_user',id=datas.ID)}}" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" id="name" required=1 value="{{datas.NAME}}" class="form-control"> 
+                </div>
+                <br>
+                <div class="form-group"><input type="text" name="age" id="age" required=1 value="{{datas.AGE}}" class="form-control"> </div>
+                <br>
+                <div class="form-group"> <input type="text" name="language" id="language" required=1 value="{{datas.LANGUAGE}}" class="form-control"></div>
+                <br>
+                <div class="form-group"><input type="text" name="preference" id="preference" required=1 value="{{datas.PREFERENCE}}" class="form-control"></div>
+                <br>
+                <input type="submit" value="Update Student" class="btn btn-primary form-control" >
+                
+                 
+            </div>
+        </form>
+    </div>
+</div>
+  
+{% endblock body %}
